@@ -196,3 +196,110 @@
 // });
 
 // console.log(activeUsers);
+
+//SPLICE METHOD
+
+const users = [
+  { id: 1, isActive: true, name: "Hritk" },
+  { id: 2, isActive: false, name: "Hrieetk" },
+  { id: 3, isActive: true, name: "Ghas" },
+  { id: 4, isActive: true, name: "Ghastoa" },
+  { id: 5, isActive: true, name: "Ghaswwdwa" },
+];
+
+const IndextoRemove = users.findIndex((user) => {
+  return user.isActive === false;
+});
+
+console.log(IndextoRemove);
+
+if (IndextoRemove !== -1) {
+  users.splice(IndextoRemove, 1);
+}
+
+const playlist = [
+  { id: "s1", title: "Song 1", artist: "A" },
+  { id: "s2", title: "Song 2", artist: "B" },
+  { id: "s3", title: "Song 3", artist: "C" },
+  { id: "s4", title: "Song 4", artist: "D" },
+];
+
+const IndexSong = playlist.findIndex(function (song) {
+  return song.id === "s1";
+});
+
+console.log(IndexSong);
+
+// if (IndexSong !== -1) {
+//   playlist.splice(IndexSong, 1);
+// }
+
+//Move a song to a particuler Id
+
+// const IndextoMove = playlist.findIndex((song) => song.id === "s1");
+
+// if (IndextoMove !== -1) {
+//   const [SongtoMove] = playlist.splice(IndextoMove, 1);
+
+//   playlist.splice(2, 0, SongtoMove);
+// }
+
+// console.log(playlist);
+
+// const newSong = { id: "S5", title: "Song 5", artist: "E" };
+
+// playlist.splice(1, 0, newSong);
+
+// console.log(playlist);
+
+// ASSIGN METHOD
+
+// const students = [
+//   { id: 1, name: "Alice", grade: "A" },
+//   { id: 2, name: "Bib", grade: "B" },
+//   { id: 3, name: "dawd", grade: "C" },
+// ];
+
+// const gradeUpdate = [{ grade: "A+" }, { grade: "A" }];
+
+// const updatedStd = students.map((student, index) => {
+//   return Object.assign({}, student, gradeUpdate[index]);
+// });
+
+// console.log(updatedStd);
+
+//FIND METHOD
+
+// const patients = [
+//   { id: 101, name: "sara", disease: "cold" },
+//   { id: 102, name: "mike", disease: "fever" },
+//   { id: 103, name: "lucy", disease: "TB" },
+// ];
+
+// const patientWithCold = patients.find((patient) => patient.disease === "cold");
+
+// console.log(patientWithCold);
+
+//SOME METHOD
+
+// const patients = [
+//   { id: 101, name: "sara", disease: "cold" },
+//   { id: 102, name: "mike", disease: "fever" },
+//   { id: 103, name: "lucy", disease: "TB" },
+// ];
+
+// const patientWithCold = patients.some((patient) => patient.disease === "cold");
+
+// console.log(patientWithCold);
+
+//EVERY METHOD
+
+const students = [
+  { id: 1, name: "Bob", grade: "B" },
+  { id: 2, name: "Grde", grade: "F" },
+  { id: 3, name: "Grwde", grade: "A" },
+];
+
+const allPassed = students.every((student) => student.grade !== "F");
+
+console.log(allPassed);
