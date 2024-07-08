@@ -185,14 +185,14 @@
 
 //FILTER FUNCTION
 
-const users = [
-  { id: 1, isActive: false, name: "Hritk" },
-  { id: 2, isActive: false, name: "Hrieetk" },
-  { id: 3, isActive: true, name: "Ghas" },
-];
+// const users = [
+//   { id: 1, isActive: false, name: "Hritk" },
+//   { id: 2, isActive: false, name: "Hrieetk" },
+//   { id: 3, isActive: true, name: "Ghas" },
+// ];
 
-const activeUsers = users.filter((user) => {
-  return user.isActive === true;
-});
+// const activeUsers = users.filter((user) => {
+//   return user.isActive === true;
+// });
 
-console.log(activeUsers);
+// console.log(activeUsers);
