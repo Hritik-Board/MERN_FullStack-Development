@@ -1,0 +1,39 @@
+body {
+  font-family: "Times New Roman", Times, serif;
+  background-color: red;
+}
+
+#blog {
+  width: 80%;
+  margin: auto;
+  padding: 30px;
+  background-color: #f8f9f9;
+  border-radius: 15px;
+  box-shadow: 0 0 12 red;
+}
+
+.related-articles {
+  background-color: green;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.related-articles h2 {
+  font-size: 100px;
+}
+
+.related-articles li {
+  margin-bottom: 10px;
+}
+
+.related-articles a:link {
+  color: #2980b9;
+}
+
+.related-articles a:visited {
+  color: green;
+}
+
+.related-articles a:hover {
+  color: brown;
+}

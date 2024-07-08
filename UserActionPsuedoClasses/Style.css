@@ -1,0 +1,29 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4);
+}
+
+#Signup-box {
+  width: 400px;
+  margin: 50px auto;
+  background-color: azure;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px chocolate;
+  padding: 40px;
+}
+
+input {
+  width: 100%;
+  padding: 15px;
+  margin: 5px;
+  border: none;
+  background-color: antiquewhite;
+}
+
+input:hover {
+  background-color: red;
+}
+
+input:focus {
+  background-color: aquamarine;
+}

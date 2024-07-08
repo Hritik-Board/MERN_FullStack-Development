@@ -1,0 +1,26 @@
+.container {
+  background-color: red;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  text-align: center;
+  font-size: 25px;
+  margin: 5px;
+}
+
+.item:nth-child(odd) {
+  background-color: aqua;
+}
+
+.item:nth-child(even) {
+  background-color: orange;
+}

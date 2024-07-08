@@ -1,0 +1,17 @@
+#Department {
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid Black;
+  margin: 20px;
+  padding: 20px;
+}
+
+#Department > .Department {
+  background-color: cyan;
+  padding: 15px;
+  margin: 15px;
+  border-radius: 8px;
+}
+
+#Department > .Department > h2 {
+  color: red;
+}

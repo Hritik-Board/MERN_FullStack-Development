@@ -1,0 +1,36 @@
+body {
+  background-color: cyan;
+}
+
+#Recipes {
+  max-width: 800px;
+  margin: auto;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgb(0, 0, 0, 1);
+}
+
+.Recipe {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: aquamarine;
+}
+
+.Recipe h2 {
+  font-weight: bold;
+  color: blueviolet;
+}
+
+.ingre {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: red;
+}
+
+.tips {
+  background-color: green;
+}
+/* .ingre ~ .tips {
+  background-color: grey;
+} */

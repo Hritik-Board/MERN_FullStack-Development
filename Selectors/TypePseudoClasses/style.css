@@ -1,0 +1,45 @@
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-color: #e8e8e8;
+  line-height: 1.6;
+}
+
+#blog-post {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgb(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 40px;
+  color: black;
+  margin-top: 20px;
+}
+
+.author {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+p {
+  margin-bottom: 25px;
+  color: #333;
+}
+
+p:empty {
+  display: none;
+}
+
+p:not(.special),
+div:not(.special),
+span:not(.special) {
+  background-color: red;
+}
+
+:where(p, div).author {
+  background-color: yellowgreen;
+}

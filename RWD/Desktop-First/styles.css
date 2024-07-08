@@ -1,0 +1,24 @@
+* {
+  margin: 0px;
+  padding: 0;
+}
+
+.header {
+  background-color: blue;
+  font-size: 30px;
+  height: 100px;
+  color: white;
+  padding: 40px;
+}
+
+@media (max-width: 1439px) {
+  .header {
+    background-color: orange;
+  }
+}
+
+@media (max-width: 1279px) {
+  .header {
+    background-color: green;
+  }
+}

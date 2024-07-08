@@ -1,0 +1,33 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f7eee5;
+  margin: 0;
+  padding: 20px;
+}
+
+#recipes {
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 2px 2px 15px rgb(0, 0, 0, 0.1);
+}
+
+.title {
+  text-align: center;
+  font-size: 30px;
+  color: #704214;
+}
+
+.image img {
+  border-radius: 10px;
+  margin-bottom: 20px;
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.title::before {
+  content: "Emma";
+  padding-right: 5px;
+}

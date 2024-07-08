@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Sizing Utilities</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <h2 class="mx-6">Width Utilities</h2>
+    <!-- Width Utilities (Relative to parents)-->
+    <div
+      style="background-color: black; color: white; width: 400px; margin: 10px"
+    >
+      <div class="w-25 bg-danger">Width 25%</div>
+      <div class="w-50 bg-success">Width 50%</div>
+      <div>Width 75%</div>
+      <div>Width 100%</div>
+      <div>Width auto</div>
+    </div>
+
+    <h2>Height Utilities</h2>
+    <!-- Height Utilities (Relative to parents)-->
+    <div
+      style="background-color: black; height: 500px; color: white; margin: 5px"
+    >
+      <div class="h-25 bg-danger d-inline-block">Height 25%</div>
+      <div class="h-50 bg-primary d-inline-block">Height 50%</div>
+      <div>Height 75%</div>
+      <div>Height 100%</div>
+      <div>Height auto</div>
+    </div>
+
+    <h2 class="my-3">Viewport Relative Sizes</h2>
+    <!-- Relative to the viewport -->
+    <div class="min-vw-100 bg-danger">Min-width 100vw</div>
+    <div class="min-vh-100 bg-primary">Min-height 100vh</div>
+    <div class="vw-100 bg-danger">Width 100vw</div>
+    <div class="vh-100 bg-success">Height 100vh</div>
+  </body>
+</html>

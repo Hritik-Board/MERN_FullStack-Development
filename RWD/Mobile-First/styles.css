@@ -1,0 +1,30 @@
+.header {
+  background-color: yellow;
+  height: 100vh;
+}
+
+/* larger phones */
+
+@media (min-width: 375px) {
+  .header {
+    background-color: blue;
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    background-color: red;
+  }
+}
+
+@media (min-width: 1280px) {
+  .header {
+    background-color: purple;
+  }
+}
+
+@media (min-width: 1440px) {
+  .header {
+    background-color: black;
+  }
+}
