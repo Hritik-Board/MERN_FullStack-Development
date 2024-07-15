@@ -2,7 +2,7 @@ const url = "https://jsonplaceholder.typicode.com/posts";
 
 // //create a new instance of XHR
 
-//Using promise based
+//Using promise based AXIOS
 
 // const fetchdata = () => {
 //   axios
@@ -20,7 +20,7 @@ const url = "https://jsonplaceholder.typicode.com/posts";
 
 // fetchdata();
 
-// Using async await
+// Using async await AXIOS
 
 const fetchData2 = async () => {
   try {
