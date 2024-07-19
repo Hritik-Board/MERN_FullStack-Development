@@ -1,0 +1,19 @@
+{
+  "name": "my-first-app",
+  "version": "2.0.0",
+  "description": "my first express application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Expressjs",
+    "nodejs",
+    "web"
+  ],
+  "author": "Hritk Gupta",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
