@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Data</title>
+  </head>
+  <body>
+    <h1>Passing the data from the server to client</h1>
+
+    <!-- accessing data from thr server -->
+    <h1>Welcome to the site <%=username%></h1>
+    <p>The email is <%=email%></p>
+    <p>The age is <%=age%></p>
+    <p>The user is prem?<%=isPrem%></p>
+
+    <%if(isPrem) {%>
+    <p>You are a premimum member</p>
+    <% } else{%>
+    <p>You are not a premimum member</p>
+    <%}%>
+  </body>
+</html>
