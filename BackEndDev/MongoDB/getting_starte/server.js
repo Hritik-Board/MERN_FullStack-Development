@@ -5,8 +5,7 @@ const { MongoClient, ServerApiVersion } = require("mongodb");
 
 const PORT = 5000;
 
-// Connect to mongoDB
-// 1. Create client
+// MongoDB connection string and credentials
 const client = new MongoClient(
   "mongodb+srv://hritikgupta326:p6wFVOBAqS3G4YxQ@learningpurpose.6a8b1wu.mongodb.net/students-database",
   {
@@ -18,50 +17,82 @@ const client = new MongoClient(
   }
 );
 
-//username : hritikgupta326
-//pas : p6wFVOBAqS3G4YxQ
-//Connection string : mongodb+srv://hritikgupta326:p6wFVOBAqS3G4YxQ@learningpurpose.6a8b1wu.mongodb.net/students-database
-// Function to connect
+// Function to connect to MongoDB and perform operations
 const ConnectDB = async () => {
   try {
-    // Example code that might throw an error
+    // Connect to MongoDB
     await client.connect();
     console.log("MongoDB connected");
 
-    //? Data base name
+    // Select the database and collection
     const database = client.db("maSynctech");
-    //? creating the collections
-    const students = database.collection("books");
-    //?Documents
-    // const result = await students.insertOne({
-    //   name: "Hritik",
-    //   age: 20,
-    //   subjects: ["Maths", "physics"],
+    const students = database.collection("students");
+
+    // // Insert multiple documents
+    // const insertResult = await students.insertMany([
+    //   {
+    //     name: "Hritik",
+    //     age: 20,
+    //     subjects: ["Maths", "physics"],
+    //   },
+    //   {
+    //     name: "Chirag",
+    //     age: 30,
+    //     subjects: ["Chemistry", "physics"],
+    //   },
+    // ]);
+    // console.log("Documents inserted:", insertResult.insertedCount);
+
+    // Find and log all documents in the collection
+    // const resultCursor = students.find();
+    // const results1 = await resultCursor.toArray();
+    // console.log("All students:", results1);
+
+    // const results2 = await students.updateOne(
+    //   {
+    //     name: "Hritik", //filter
+    //   },
+    //   {
+    //     $set: { age: 50 },
+    //   }
+    // );
+    // console.log(results2);
+
+    // const results2 = await students.updateMany(
+    //   {
+    //     age: 30, //filter
+    //   },
+    //   {
+    //     $set: { subjects: ["Biology"] },
+    //   }
+    // );
+    // console.log(results2);
+
+    // const result = await students.deleteOne({
+    //   name: "Chirag",
     // });
 
-    //!Insert many
-    const result = await students.insertMany([
-      {
-        name: "Hritik",
-        age: 20,
-        subjects: ["Maths", "physics"],
-      },
-      {
-        name: "Chirag",
-        age: 30,
-        subjects: ["Chemistry", "physics"],
-      },
-    ]);
+    // const result = await students.deleteMany({
+    //   name: "Chirag",
+    // });
+
+    const result = await students.findOneAndDelete({
+      age: 50,
+    });
     console.log(result);
   } catch (error) {
-    // Handling the error
+    // Handle any errors that occur during connection or operations
     console.error("An error occurred:", error.message);
+  } finally {
+    // Close the connection to MongoDB
+    await client.close();
   }
 };
 
-// Call the function
+// Call the function to connect to MongoDB and perform operations
 ConnectDB();
 
+// Start the Express server
 app.listen(PORT, () => {
-  console.log(`server is live on ${PORT}`);
+  console.log(`Server is live on ${PORT}`);
 });
