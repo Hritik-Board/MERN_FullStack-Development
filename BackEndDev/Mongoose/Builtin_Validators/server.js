@@ -20,22 +20,54 @@ const connectoDB = async () => {
 connectoDB();
 
 //! Design Schema
-const userProfileSchema = new mongoose.Schema({
-  user: String,
-  age: Number,
-  birthday: Date,
-  isActive: Boolean,
-  hobbies: [String],
-  objectId: mongoose.Schema.Types.ObjectId, //Object Id,
-  address: {
-    street: String,
-    city: String,
-    postCode: Number,
+const userProfileSchema = new mongoose.Schema(
+  {
+    username: {
+      type: String,
+      required: [true, "It is required"],
+      unique: true,
+      minLength: 3,
+      maxLength: 10,
+    },
+    email: {
+      type: String,
+      required: [true, "Email is required"],
+      match: /@/,
+    },
+    age: {
+      type: Number,
+      required: [true, "age is required"],
+      min: 18,
+      max: 60,
+    },
+    gender: {
+      type: String,
+      enum: ["Male", "Female", "Other"],
+      default: "other",
+    },
   },
-  customData: mongoose.Schema.Types.Mixed,
-});
+  {
+    timestamps: true,
+  }
+);
 
 //? Compile the schema and form the model
 const User = mongoose.model("User", userProfileSchema);
+
+const createdoc = async () => {
+  try {
+    const userCreated = await User.create({
+      gender: "Male",
+      username: "Hritik",
+      age: 20,
+      email: "hritik@gmail.com",
+    });
+    console.log(userCreated);
+  } catch (e) {
+    console.log(e);
+  }
+};
+
+createdoc();
 //start the server
 app.listen(PORT, console.log(`Server running at ${PORT}`));
