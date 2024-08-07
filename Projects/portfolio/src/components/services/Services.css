@@ -35,16 +35,18 @@
   flex-direction: column;
   align-items: flex-start;
   margin: 20px;
-  line-height: 1.5rem;
+  line-height: 2rem;
 }
 
 .services-desc-container h1 {
-  padding-bottom: 10px;
+  padding-bottom: 15px;
+  line-height: 3rem;
 }
 
 .services-desc-container span {
   font-size: 2.5rem;
   color: #fdb448;
+  padding: 5px;
 }
 
 .services-container button {
@@ -54,4 +56,24 @@
   color: #fff;
   margin-top: 30px;
   padding: 10px;
+}
+
+@media (min-width: 768px) {
+  .services-list-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .services-desc-container {
+    width: 50%;
+  }
+
+  .services-item-container {
+    width: 50%;
+  }
+
+  .services-item {
+    width: 80%;
+  }
 }
